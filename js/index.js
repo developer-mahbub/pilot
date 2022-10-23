@@ -3,11 +3,6 @@ $(document).ready(function(){
 		$(".login-modal").show();
 		$("body").css("overflow", "hidden");
 	},50);
-   // $("body").click(function(){
-   //  $(".login-modal").hide();
-   //  $("body").css("overflow", "auto");
-   // });
-//form ajax, disable button, send mail
 
 $('#form').submit(function (e) {
   e.preventDefault();
@@ -22,6 +17,10 @@ $('#form').submit(function (e) {
       $("body").css("overflow", "auto");
     },
   });
+ setTimeout(function() {
+    $(".login-modal").css('display', 'none');
+    $("body").css("overflow", "auto");
+  },5000);
 });
 
 
